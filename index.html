@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bintaxpay-Fino</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: auto;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .scrolling-text {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll 50s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    /* Define the custom classes for primary colors */
+    .primary-color {
+      --tw-bg-opacity: 1;
+      background-color: rgba(165, 3, 252, var(--tw-bg-opacity));
+      /* Corrected color */
+      border-color: rgba(165, 3, 252, var(--tw-bg-opacity));
+      /* For borders */
+    }
+
+    .primary-hover:hover {
+      --tw-bg-opacity: 1;
+      color: rgba(165, 3, 252, var(--tw-text-opacity));
+      /* Darker red on hover */
+    }
+
+    .primary-text {
+      --tw-text-opacity: 1;
+      color: rgba(165, 3, 252, var(--tw-text-opacity));
+      /* Text color */
+    }
+
+    .group:hover .primary-hover {
+      color: rgba(165, 3, 252);
+      /* Apply the desired color on hover */
+    }
+
+    :root {
+      --group-color: #a503fc;
+    }
+
+    .group-hover-color {
+      background-color: var(--group-color);
+    }
+
+    .group-hover-text-color {
+      color: var(--group-color);
+    }
+
+    .group:hover .group-hover-color {
+      background-color: var(--group-color);
+    }
+
+    .group:hover .group-hover-text-color {
+      color: #a503fc;
+    }
+  </style>
+</head>
+
+<body class="primary-color">
+  <header class="text-white py-2 text-center text-xs overflow-hidden">
+    <div class="scroller">
+      <span class="scrolling-text space-x-6 font-bold">
+        <!-- Please note that AEPS India does not register retailers or agents in any manner, and there is no official AEPS
+        India application available on the Play Store. Be cautious of frauds or scams. -->
+        <a>Recharge & BBPS</a>
+        <a>DMT</a>
+        <a>AEPS</a>
+        <a>IRCTC</a>
+        <a>PANTASIGN</a>
+        <a>XtraTrust</a>
+      </span>
+    </div>
+  </header>
+</body>
+
+<nav class="flex justify-between items-center bg-white py-2 ">
+  <div class="flex items-center">
+    <img src="images/logo.jpg" alt="AePS India" class="h-12 ml-20">
+    <span class="primary-text font-bold text-xl ml-2">BINTAX <span class="text-gray-800">india</span></span>
+  </div>
+  <div class="flex">
+    <div class=" items-center space-x-6 mr-12 text-black  pt-2">
+      <a href="#" class="primary-hover hover:underline hover:font-bold">Services</a>
+      <a href="#" class="primary-hover hover:underline hover:font-bold">API Solutions</a>
+      <a href="#" class="primary-hover hover:underline hover:font-bold">Blog</a>
+      <a href="#" class="primary-hover hover:underline hover:font-bold">FAQ's</a>
+      <a href="#" class="primary-hover hover:underline hover:font-bold">Contact Us</a>
+    </div>
+    <!-- <a href="#" class="primary-color primary-text text-white px-4 py-2 rounded-3xl hover:bg-black mr-20">Become a
+      Partner</a> -->
+  </div>
+</nav>
+
+<!-- banner section -->
+<!-- <section class="flex flex-col items-center text-center text-white py-12">
+  <h1 class="text-4xl font-bold">Get Started with India's No. 1 <br> AePS Service Provider Company</h1>
+  <div class="flex items-center justify-center mt-12">
+
+    <img src="images/main-image.png" alt="BINTAX India" class="h-60 w-96">
+
+  </div> -->
+
+<!-- <section class="bg-orange-500 flex justify-center items-center min-h-screen"> -->
+<section class="flex flex-col items-center text-center text-white py-12">
+  <div class="relative rounded-full w-52 h-52 flex justify-center items-center shadow-lg">
+    <div class="text-center">
+      <!-- <div class="text-2xl font-bold">AePS <span class="text-orange-500">india</span></div> -->
+      <img src="images/main-image.png" alt="Fund Transfer" class="w-auto h-auto">
+      <!-- <div class="text-sm">Aadhaar Enabled Payment Services</div> -->
+    </div>
+
+    <!-- Icons surrounding the center -->
+
+
+
+    <div class="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div class="flex flex-col items-center mr-32 mt-32">
+        <div class="p-1 rounded-full">
+          <!-- Insert the Balance Enquiry icon here -->
+          <img src="images/main1.png" alt="Balance Enquiry" class="w-auto h-auto">
+        </div>
+        <!-- <div class="text-white text-sm mt-2">BALANCE ENQUIRY</div> -->
+      </div>
+    </div>
+
+    <div class="absolute left-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div class="flex flex-col items-center mr-2 mt-72">
+        <div class="rounded-full">
+          <!-- Insert the Balance Enquiry icon here -->
+          <img src="images/main2.png" alt="Balance Enquiry" class="w-16 h-16">
+        </div>
+        <!-- <div class="text-white text-sm mt-2">BALANCE ENQUIRY</div> -->
+      </div>
+    </div>
+
+    <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+      <div class="flex flex-col items-center mt-36">
+        <div class=" rounded-full">
+          <img src="images/main6.png" alt="Fund Transfer" class="w-16 h-16 rounded-full">
+        </div>
+        <!-- <div class="text-white text-sm mt-2">FUND TRANSFER</div> -->
+      </div>
+    </div>
+
+    <div class="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2">
+      <div class="flex flex-col items-center ml-2 mt-72">
+        <div class="rounded-full">
+          <!-- Insert the Aadhaar Pay icon here -->
+          <img src="images/main3.png" alt="Aadhaar Pay" class="w-16 h-16">
+        </div>
+        <!-- <div class="text-white text-sm mt-2">AADHAAR PAY</div> -->
+      </div>
+    </div>
+
+    <div class="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2">
+      <div class="flex flex-col items-center ml-32 mt-32">
+        <div class="p-1 rounded-full">
+          <!-- Insert the Aadhaar Pay icon here -->
+          <img src="images/main5.png" alt="Aadhaar Pay" class="w-auto h-auto">
+        </div>
+        <!-- <div class="text-white text-sm mt-2">AADHR PAY</div> -->
+      </div>
+    </div>
+
+
+
+    <!-- Continue adding icons for the other services -->
+  </div>
+
+  <div class="mt-40 flex space-x-4">
+    <button
+      class="bg-white font-semibold primary-color primary-text px-8 py-2 rounded-2xl hover:text-white hover:bg-black">Get
+      A
+      Quote</button>
+    <button
+      class="bg-white font-semibold primary-color primary-text px-8 py-2 rounded-2xl hover:text-white hover:bg-black">Request
+      A
+      Call</button>
+  </div>
+</section>
+</body>
+
+<!-- text section -->
+<section class="bg-gray-100 flex items-center justify-center py-16">
+  <div class="text-center px-4">
+    <h1 class="text-2xl md:text-4xl font-bold mb-8">
+      Offering Real-time Settlement in Bank Account for AEPS
+    </h1>
+    <p class="text-gray-600 max-w-6xl mx-auto">
+      AEPS (Aadhar Enabled Payment System) is a new payment service offered by<br>
+      the National Payments Corporation of India to banks, financial institutions using ‘Aadhaar’ number and<br>
+      online UIDAI authentication through their respective Business correspondent service centres.
+    </p>
+  </div>
+</section>
+
+<!-- service section -->
+<section class=" bg-gradient-to-r from-[#03dbfc] to-[#fcf803] py-8">
+  <div class="max-w-6xl mx-auto px-4">
+    <!-- Services Header -->
+    <h2 class="text-4xl font-bold text-center text-black mb-8">Services</h2>
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Service Card 1 -->
+      <div
+        class="group bg-white p-6 rounded-lg shadow-lg text-left hover:bg-[#8208c4] hover:bg-gradient-to-r from-purple-400 to-pink-800 text-white font-bold">
+        <div class="mr-60 mb-4">
+          <img src="images/comp_reg.jpg" alt="Cash Withdrawal" class="h-16 w-24 bg-white rounded-lg mx-auto shadow-xl">
+        </div>
+        <h3
+          class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-white primary-text group-hover:primary-hover">
+          Company Registration
+        </h3>
+        <p class="text-gray-600 group-hover:text-white">
+          AEPS India offers easy cash withdrawal services with AEPS solutions.
+        </p>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div
+        class="group bg-white p-6 rounded-lg shadow-lg text-left hover:bg-[#8208c4] hover:bg-gradient-to-r from-purple-400 to-pink-800 text-white font-bold">
+        <div class="mr-60 mb-4">
+          <img src="images/loan.jpg" alt="Cash Withdrawal" class="h-16 bg-white rounded-lg mx-auto shadow-xl">
+        </div>
+        <h3
+          class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-white primary-text group-hover:primary-hover">
+          Niwin Loan
+        </h3>
+        <p class="text-gray-600 group-hover:text-white">
+          AEPS India offers easy cash withdrawal services with AEPS solutions.
+        </p>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div
+        class="group bg-white p-6 rounded-lg shadow-lg text-left hover:bg-[#8208c4] hover:bg-gradient-to-r from-purple-400 to-pink-800 text-white font-bold">
+        <div class="mr-60 mb-4">
+          <img src="images/irctc.jpg" alt="Cash Withdrawal" class="h-16 bg-white rounded-lg mx-auto shadow-xl">
+        </div>
+        <h3
+          class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-white primary-text group-hover:primary-hover">
+          Irctc Booking
+        </h3>
+        <p class="text-gray-600 group-hover:text-white">
+          AEPS India offers easy cash withdrawal services with AEPS solutions.
+        </p>
+      </div>
+
+      <!-- Service Card 4 -->
+      <div
+        class="group bg-white p-6 rounded-lg shadow-lg text-left hover:bg-[#8208c4] hover:bg-gradient-to-r from-purple-400 to-pink-800 text-white font-bold">
+        <div class="mr-60 mb-4">
+          <img src="images/aeps.jpg" alt="Cash Withdrawal" class="h-16 bg-white rounded-lg mx-auto shadow-xl">
+        </div>
+        <h3
+          class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-white primary-text group-hover:primary-hover">
+          AEPS
+        </h3>
+        <p class="text-gray-600 group-hover:text-white">
+          AEPS India offers easy cash withdrawal services with AEPS solutions.
+        </p>
+      </div>
+
+      <!-- Service Card 5 -->
+      <div
+        class="group bg-white p-6 rounded-lg shadow-lg text-left hover:bg-[#8208c4] hover:bg-gradient-to-r from-purple-400 to-pink-800 text-white font-bold">
+        <div class="mr-60 mb-4">
+          <img src="images/bbps.jpg" alt="Cash Withdrawal" class="h-16 bg-white rounded-lg mx-auto shadow-xl">
+        </div>
+        <h3
+          class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-white primary-text group-hover:primary-hover">
+          BBPS
+        </h3>
+        <p class="text-gray-600 group-hover:text-white">
+          AEPS India offers easy cash withdrawal services with AEPS solutions.
+        </p>
+      </div>
+
+      <!-- Service Card 6 -->
+      <div
+        class="group bg-white p-6 rounded-lg shadow-lg text-left hover:bg-[#8208c4] hover:bg-gradient-to-r from-purple-400 to-pink-800 text-white font-bold">
+        <div class="mr-60 mb-4">
+          <img src="images/payout.jpg" alt="Cash Withdrawal" class="h-16 bg-white rounded-lg mx-auto shadow-xl">
+        </div>
+        <h3
+          class="text-xl font-semibold text-gray-900 mb-2 group-hover:text-white primary-text group-hover:primary-hover">
+          Payout
+        </h3>
+        <p class="text-gray-600 group-hover:text-white">
+          AEPS India offers easy cash withdrawal services with AEPS solutions.
+        </p>
+      </div>
+</section>
+
+
+<!-- solution section -->
+<section class="bg-gray-100 py-12 px-52">
+  <div class="container mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">Our Solutions</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Card 1 -->
+      <div class="group primary-color rounded-lg shadow-lg p-4 text-center relative overflow-hidden">
+        <!-- Initial Content -->
+        <div class="relative z-20 transition duration-300 group-hover:opacity-0">
+          <h3 class="text-xl font-semibold text-black mt-4">Api Solution</h3>
+          <p class="text-white mt-2 mb-28 tracking-tight font-thin">Trusted provider of AEPS software in India.</p>
+          <div
+            class="absolute inset-x-0 bottom-0 transform translate-y-1/2 mx-auto h-64 mb-32 w-64 bg-white rounded-t-full">
+          </div>
+          <div class="flex justify-center relative z-30">
+            <img src="images/solution.png" alt="API Solution" class="h-40 w-40 pb-12">
+          </div>
+        </div>
+
+        <!-- Hover Content -->
+        <div
+          class="absolute inset-0 bg-black text-left p-6 rounded-lg opacity-0 transition duration-300 group-hover:opacity-100">
+          <h3 class="text-xl font-semibold text-white">Benefits of Api Solution</h3>
+          <hr class="my-2 border-gray-400">
+          <ul class="list-none text-gray-300 space-y-4">
+            <li class="flex items-center">
+              <span class="primary-text mr-2">✔</span> Convenience for Customers
+            </li>
+            <li class="flex items-center">
+              <span class="primary-text mr-2">✔</span> Secure and Encrypted Transactions
+            </li>
+            <li class="flex items-center">
+              <span class="primary-text mr-2">✔</span> Cost-Effective Solution
+            </li>
+            <li class="flex items-center">
+              <span class="primary-text mr-2">✔</span> Best commission Structure
+            </li>
+          </ul>
+          <button class="mt-6 primary-color text-white font-semibold py-2 px-4 rounded-full w-40">
+            Call Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group primary-color rounded-lg shadow-lg p-4 text-center relative overflow-hidden">
+        <!-- Initial Content -->
+        <div class="relative z-20 transition duration-300 group-hover:opacity-0">
+          <h3 class="text-xl font-semibold text-black mt-4">Software Solution</h3>
+          <p class="text-white mt-2 mb-28 tracking-tight font-thin">Trusted provider of AEPS software in India.</p>
+          <div
+            class="absolute inset-x-0 bottom-0 transform translate-y-1/2 mx-auto h-64 mb-32 w-64 bg-white rounded-t-full">
+          </div>
+          <div class="flex justify-center relative z-30">
+            <img src="images/solution.png" alt="Software Solution" class="h-40 w-40 pb-12">
+          </div>
+        </div>
+
+        <!-- Hover Content -->
+        <div
+          class="absolute inset-0 bg-black text-left p-6 rounded-lg opacity-0 transition duration-300 group-hover:opacity-100">
+          <h3 class="text-xl font-semibold text-white">Benefits of Software Solution</h3>
+          <hr class="my-2 border-gray-400">
+          <ul class="list-none text-gray-300 space-y-4">
+            <li class="flex items-center">
+              <span class="primary-text mr-2">✔</span> Ease of Use
+            </li>
+            <li class="flex items-center">
+              <span class="primary-text mr-2">✔</span> Scalability
+            </li>
+            <li class="flex items-center">
+              <span class="primary-text mr-2">✔</span> Robust Security Features
+            </li>
+            <li class="flex items-center">
+              <span class="primary-text mr-2">✔</span> Excellent Support
+            </li>
+          </ul>
+          <button class="mt-6 primary-color text-white font-semibold py-2 px-4 rounded-full w-40">
+            Call Now
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- how it works -->
+<section class="max-w-screen-xl mx-auto py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
+  <h2 class="text-3xl font-extrabold text-center text-gray-900">How it works</h2>
+
+
+  <!-- Line section -->
+  <div class="flex items-center my-5">
+    <div class="flex-grow h-px primary-color"></div>
+    <div id="apiBtn" class="px-2 cursor-pointer primary-text font-semibold">AePS ApiApiApi Portal</div>
+    <div class="flex-grow h-px primary-color"></div>
+    <div id="softwarePortalBtn" class="px-2 cursor-pointer primary-text font-semibold">AePS Software Portal</div>
+    <div class="flex-grow h-px primary-color"></div>
+  </div>
+
+  <!-- Content Section -->
+  <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-start px-12">
+    <!-- Benefits Section -->
+    <div>
+      <h3 class="text-2xl font-bold text-gray-800">Benefit</h3>
+      <div class="mt-4">
+        <div class="flex items-start space-x-3">
+          <div class="flex-shrink-0">
+            <div class="h-12 w-12 primary-color text-white rounded-full flex items-center justify-center">
+              <img src="images/bio-removebg-preview.png" alt="AePS API" class="h-10">
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-900">Streamlined Transactions</h4>
+            <p id="benefitDescription" class="mt-1 text-gray-600">
+              AEPS software simplifies the process of Aadhaar-enabled transactions, making them faster and more
+              efficient.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-3 mt-6">
+          <div class="flex-shrink-0">
+            <div class="h-12 w-12 primary-color text-white rounded-full flex items-center justify-center">
+              <img src="images/bio-removebg-preview.png" alt="AePS API" class="h-10">
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-900">Financial Inclusion</h4>
+            <p class="mt-1 text-gray-600">
+              AEPS software promotes financial inclusion by allowing individuals without traditional bank accounts to
+              perform basic banking transactions using their Aadhaar number.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-3 mt-6">
+          <div class="flex-shrink-0">
+            <div class="h-12 w-12 primary-color text-white rounded-full flex items-center justify-center">
+              <img src="images/bio-removebg-preview.png" alt="AePS API" class="h-10">
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-900">Financial Inclusion</h4>
+            <p class="mt-1 text-gray-600">
+              AEPS software promotes financial inclusion by allowing individuals without traditional bank accounts to
+              perform basic banking transactions using their Aadhaar number.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Image Section -->
+    <div class="flex justify-center mt-8" id="image">
+      <img src="images/benefit-removebg-preview.png" alt="AePS API" id="benefitImage" class="h-80 max-w-60 mt-20">
+    </div>
+
+    <!-- Process Section -->
+    <div>
+      <h3 class="text-2xl font-bold text-gray-800">Process</h3>
+      <div class="mt-4">
+        <div class="flex items-start space-x-3">
+          <div class="flex-shrink-0">
+            <div class="h-12 w-12 primary-color text-white rounded-full flex items-center justify-center">
+              <img src="images/bio-removebg-preview.png" alt="AePS API" class="h-10">
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-900">Vendor Selection and Setup</h4>
+            <p class="mt-1 text-gray-600">
+              Choose us as a reliable AEPS software provider and follow their instructions to install and set up the
+              software.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="flex items-start space-x-3 mt-6">
+          <div class="flex-shrink-0">
+            <div class="h-12 w-12 primary-color text-white rounded-full flex items-center justify-center">
+              <img src="images/bio-removebg-preview.png" alt="AePS API" class="h-10">
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-900">Compliance and Integration</h4>
+            <p class="mt-1 text-gray-600">
+              Register with relevant regulatory authorities, such as the NPCI, and comply with the guidelines for AEPS
+              transactions.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-start space-x-3 mt-6">
+          <div class="flex-shrink-0">
+            <div class="h-12 w-12 primary-color text-white rounded-full flex items-center justify-center">
+              <img src="images/bio-removebg-preview.png" alt="AePS API" class="h-10">
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold text-gray-900">Compliance and Integration</h4>
+            <p class="mt-1 text-gray-600">
+              Register with relevant regulatory authorities, such as the NPCI, and comply with the guidelines for AEPS
+              transactions.
+            </p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- mobile section -->
+<section class="flex items-center justify-center bg-gray-100 pb-20">
+  <!-- Input Field -->
+  <div class="flex rounded-l-full border primary-color -mr-6">
+    <input type="text" placeholder="Mobile No."
+      class="text-gray-600 placeholder-gray-500 px-4 focus:outline-none focus:ring-2 focus:ring-orange-500 rounded-l-full"
+      style="padding-top: 7px; padding-bottom: 7px; " />
+  </div>
+  <!-- Button -->
+  <button
+    class="primary-color text-white font-semibold px-6 py-2 rounded-full focus:outline-none hover:bg-black transition duration-200 ease-in-out">
+    Request a call back
+  </button>
+</section>
+
+<!-- choose section -->
+<section class="primary-color py-10">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-white text-3xl font-bold text-center mb-10">Why choose AEPS India</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Card 1 -->
+      <div class="primary-color p-0 flex justify-center items-center ">
+        <div class="bg-white p-8 rounded-3xl shadow-xl flex items-center border-x-8 border-gray-300 group relative">
+          <div
+            class="p-4 rounded-full border-4 border-gray-300 group-hover-color transition-colors duration-300 -left-20 relative bg-white shadow-md">
+            <!-- Replace 'your-icon-path' with the actual path to your icon -->
+            <img src="images/cash-32.png" alt="Icon" class="w-20 h-12">
+          </div>
+          <div class="-ml-12 ">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover-text-color transition-colors duration-300">
+              Integrated Solution
+            </h3>
+            <p class="text-gray-600">Complete Business software solution for AEPS Service providers.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white p-8 pt-8 rounded-3xl shadow-xl flex items-start border-x-8 border-gray-300 group">
+        <div class="p-4 rounded-full border-4 border-gray-300 group-hover:bg-[#fc5603] transition-colors duration-300">
+          <!-- Replace 'your-icon-path' with the actual path to your icon -->
+          <img src="images/cash-32.png" alt="Icon" class="w-20 h-12">
+        </div>
+        <div class="ml-2">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover-text-color transition-colors duration-300">
+            Integrated Solution
+          </h3>
+          <p class="text-gray-600">Complete Business software solution for AEPS Service providers.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+        <div class="bg-orange-100 p-4 rounded-full">
+          <!-- Replace with the appropriate SVG or icon -->
+          <img src="your-icon-path" alt="Icon" class="w-8 h-8">
+        </div>
+        <div class="ml-4">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Cross Platform Support</h3>
+          <p class="text-gray-600">AEPS India offers cross platform support with our well-researched AEPS Software for
+            AEPS Service providers.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+        <div class="bg-orange-100 p-4 rounded-full">
+          <!-- Replace with the appropriate SVG or icon -->
+          <img src="your-icon-path" alt="Icon" class="w-8 h-8">
+        </div>
+        <div class="ml-4">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Best Commission Structure</h3>
+          <p class="text-gray-600">AEPS India offers the best commission structure for Businesses who are using our AEPS
+            Solutions (AEPS portal and AEPS API solutions).</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Impact of AEPS India -->
+<section class="flex flex-col items-center py-12 bg-gray-100">
+  <h2 class="text-3xl font-bold text-black mb-12">Impact of AePS India</h2>
+  <div class="flex justify-center items-center space-x-6">
+    <div class="group">
+      <div class="bg-white text-center py-6 px-24 rounded-full shadow-md group-hover-color">
+        <p class="text-3xl font-bold text-black group-hover:text-white">950+</p>
+        <p class="text-gray-600 font-bold group-hover:text-white">Business Partners</p>
+      </div>
+    </div>
+    <div class="primary-color text-center py-6 px-36 rounded-full shadow-md">
+      <p class="text-3xl font-bold text-white">28</p>
+      <p class="text-white font-bold">States</p>
+    </div>
+    <div class="group">
+      <div class="bg-white text-center py-6 px-24 rounded-full shadow-md group-hover-color">
+        <p class="text-3xl font-bold text-black group-hover:text-white">50 Lakh+</p>
+        <p class="text-gray-600 font-bold group-hover:text-white">Retailers</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- contact section -->
+<div class="flex flex-col items-center py-12 bg-gray-100">
+  <h2 class="text-3xl font-bold text-black mb-8">Let's Connect to Create an Impact</h2>
+  <form class="w-full max-w-2xl">
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <input
+          class="appearance-none block w-full bg-gray-100 placeholder-gray-600 text-gray-700 border border-gray-300 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+          type="text" placeholder="First Name">
+      </div>
+      <div class="w-full md:w-1/2 px-3">
+        <input
+          class="appearance-none block w-full bg-gray-100 placeholder-gray-600 text-gray-700 border border-gray-300 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+          type="text" placeholder="Last Name">
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <input
+          class="appearance-none block w-full bg-gray-100 placeholder-gray-600 text-gray-700 border border-gray-300 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+          type="email" placeholder="Email">
+      </div>
+      <div class="w-full md:w-1/2 px-3">
+        <input
+          class="appearance-none block w-full bg-gray-100 placeholder-gray-600 text-gray-700 border border-gray-300 rounded-full py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+          type="text" placeholder="Phone">
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+        <input type="checkbox" id="portal" class="hidden peer">
+        <label for="portal"
+          class="block w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-full py-3 px-4 leading-tight text-center cursor-pointer peer-checked:bg-black peer-checked:text-white transition-colors duration-300">
+          AePS Software Portal
+        </label>
+      </div>
+      <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+        <input type="checkbox" id="api" class="hidden peer">
+        <label for="api"
+          class="block w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-full py-3 px-4 leading-tight text-center cursor-pointer peer-checked:bg-black peer-checked:text-white transition-colors duration-300">
+          AePS API
+        </label>
+      </div>
+      <div class="w-full md:w-1/3 px-3">
+        <input type="checkbox" id="other" class="hidden peer">
+        <label for="other"
+          class="block w-full bg-gray-100 text-gray-700 border border-gray-300 rounded-full py-3 px-4 leading-tight text-center cursor-pointer peer-checked:bg-black peer-checked:text-white transition-colors duration-300">
+          OTHER
+        </label>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <button
+        class="primary-color hover:bg-black text-white font-bold py-3 px-80 rounded-full focus:outline-none focus:shadow-outline"
+        type="button">
+        Submit
+      </button>
+    </div>
+  </form>
+  <!-- Footer Section -->
+  <div class="mt-12 text-center text-gray-500">
+    <p class="text-sm">&copy; Copyright 2024 All Rights Reserved</p>
+    <p class="text-sm">
+      <a href="#" id="openPopup" class="primary-text hover:underline">BINTAXpay</a> |
+      <a href="#" class="primary-text hover:underline">Terms & Conditions</a>
+    </p>
+  </div>
+</div>
+
+<!-- Pop-up Section (initially hidden) -->
+<div id="popup" class="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-75 hidden">
+  <div class="bg-white rounded-3xl overflow-hidden shadow-xl transform transition-all w-full max-w-3xl p-12">
+    <!-- Close Button -->
+    <button id="closePopup" class="absolute top-0 right-0 mt-4 mr-4 primary-text primary-hover">
+      &times;
+    </button>
+
+    <!-- Content of the Pop-up -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="p-4">
+        <h2 class="text-2xl font-bold pb-12">Contact</h2>
+        <img src="images/benefit-removebg-preview.png" alt="Contact Image" class="w-full h-auto" />
+      </div>
+      <div class="p-4 primary-color rounded-3xl text-white">
+        <form>
+          <div class="grid grid-cols-2 gap-4 mb-4 ">
+            <input class="bg-transparent border-b-2 border-white py-2 px-4 focus:outline-none placeholder-white"
+              type="text" placeholder="First Name" />
+            <input class="bg-transparent border-b-2 border-white py-2 px-4 focus:outline-none placeholder-white"
+              type="text" placeholder="Last Name" />
+          </div>
+          <input
+            class="bg-transparent border-b-2 border-white py-2 px-4 w-full mb-4 focus:outline-none placeholder-white"
+            type="email" placeholder="Email" />
+          <input
+            class="bg-transparent border-b-2 border-white py-2 px-4 w-full mb-4 focus:outline-none placeholder-white"
+            type="tel" placeholder="Phone" />
+          <textarea
+            class="bg-transparent border-b-2 border-white py-2 px-4 w-full mb-4 focus:outline-none placeholder-white"
+            type="text" placeholder="Your Message"></textarea>
+          <button type="submit"
+            class="w-full bg-white primary-text hover:bg-black hover:text-white py-2 px-4 rounded-full">SUBMIT</button>
+        </form>
+      </div>
+    </section>
+
+
+
+    <script>
+      document.getElementById("softwarePortalBtn").addEventListener("click", function () {
+        // Update button styles
+        this.classList.add("primary-color", "text-white");
+        this.classList.remove("primary-text");
+
+        document.getElementById("apiBtn").classList.remove("primary-color", "text-white");
+        document.getElementById("apiBtn").classList.add("primary-text");
+
+        // Update content
+        document.getElementById("benefitDescription").textContent = "AEPS Software Portal allows you to access the portal seamlessly, enabling you to manage transactions and services with ease.";
+
+        // Update image
+        document.getElementById("benefitImage").src = "images/mid-image.png";
+      });
+
+      document.getElementById("apiBtn").addEventListener("click", function () {
+        // Update button styles
+        this.classList.add("primary-color", "text-white");
+        this.classList.remove("primary-text");
+
+        document.getElementById("softwarePortalBtn").classList.remove("primary-color", "text-white");
+        document.getElementById("softwarePortalBtn").classList.add("primary-text");
+
+        // Update content
+        document.getElementById("benefitDescription").textContent = "The AePS API facilitates smooth and secure Aadhaar-based payments, ensuring quick and reliable transactions.";
+
+        // Update image
+        document.getElementById("benefitImage").src = "images/solution.png";
+      });
+      //pop-up 
+      const openPopup = document.getElementById('openPopup');
+      const closePopup = document.getElementById('closePopup');
+      const popup = document.getElementById('popup');
+
+      openPopup.addEventListener('click', function (event) {
+        event.preventDefault();
+        popup.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+      });
+
+      closePopup.addEventListener('click', function () {
+        popup.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+      });
+
+      // Optionally, close the pop-up when clicking outside the pop-up content
+      popup.addEventListener('click', function (event) {
+        if (event.target === popup) {
+          popup.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }
+      });
+    </script>
+
+</html>
