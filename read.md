@@ -1,94 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Background Image */
-body {
-  background: url('images/casino.avif') no-repeat center center fixed;
-  background-size: cover;
-  overflow: hidden;
-  /* Prevents scrolling */
-}
-
-/* Container for Flexbox Alignment */
-.container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  min-height: 100vh;
-  padding-right: 2rem;
-  /* Adjust spacing from the right */
-}
-
-/* Form Styling */
-.form-container {
-  background-color: rgba(31, 41, 55, 0.9); /* Semi-transparent background */
-  padding: 2rem;
-  border-radius: 0.5rem;
-  width: 100%;
-  max-width: 24rem;
-  margin-right: 40px;
-  animation: blink-shadow 1s infinite;
-}
-
-@keyframes blink-shadow {
-  0% {
-    box-shadow: 
-      0 -8px 12px rgba(138, 43, 226, 0.8), /* Violet at the top */
-      0 0px 12px rgba(34, 139, 34, 0.6),   /* Green in the middle */
-      0 8px 20px rgba(255, 223, 0, 0.8);   /* Yellow at the bottom */
-  }
-
-  50% {
-    box-shadow: none
-  }
-
-  100% {
-    box-shadow: 
-      0 -8px 12px rgba(138, 43, 226, 0.8), /* Back to Violet at the top */
-      0 0px 12px rgba(34, 139, 34, 0.6),   /* Back to Green in the middle */
-      0 8px 20px rgba(255, 223, 0, 0.8);   /* Back to Yellow at the bottom */
-  }
-}
-
-
-.form-container h2 {
-  color: #fff;
-}
-
-.form-container p,
-.form-container a {
-  color: #d1d5db;
-}
-
-.form-container a:hover {
-  color: #fbbf24;
-}
-
-.form-container input {
-  background-color: #374151;
-  color: #d1d5db;
-  border: none;
-  padding: 0.75rem;
-  border-radius: 0.25rem;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-.form-container button {
-  background-color: #fbbf24;
-  color: #000;
-  border: none;
-  padding: 0.75rem;
-  width: 100%;
-  border-radius: 0.25rem;
-  font-weight: bold;
-}
-
-.form-container button:hover {
-  background-color: #f59e0b;
-}
-
 /* Common Styles for Wheel Ball */
 .wheel-ball {
   position: absolute;
@@ -103,90 +12,44 @@ body {
 /* Specific Positions for Balls */
 
 .ball1 {
-  top: 0px;
-  left: 232px;
+  top: -8px;
+  left: 228px;
   animation-delay: 0s;
-  width: 8.5px;
-  height: 8px;
-  background: linear-gradient(to bottom, #ad6464 0%, #915959 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 4.5px 2.7px rgb(225, 224, 224); 
-  opacity: 0.10;
 }
 .ball2 {
-  top: 3px;
+  top: -2px;
   left: 243px;
   animation-delay: 0.2s;
-  width: 9px;
-  height: 8.5px;
-  background: linear-gradient(to bottom, #ad6a6a 0%, #915959 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2.7px rgb(225, 224, 224); 
-  opacity: 0.20;
 }
 .ball3 {
-  top: 8px;
-  left: 255px;
+  top: 6px;
+  left: 257px;
   animation-delay: 0.4s;
-  width: 9.5px;
-  height: 9px;
-  background: linear-gradient(to bottom, #ad6a6a 0%, #915959 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2.7px rgb(225, 224, 224); 
-  opacity: 0.30;
 }
 .ball4 {
   top: 15px;
   left: 270px;
   animation-delay: 0.6s;
-  width: 10.5px;
-  height: 10px;
-  background: linear-gradient(to bottom, #ad6a6a 0%, #915959 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2.8px rgb(225, 224, 224); 
-  opacity: 0.40;
 }
 .ball5 {
   top: 23px;
   left: 284px;
   animation-delay: 0.8s;
-  width: 11px;
-  height: 10.5px;
-  background: linear-gradient(to bottom, #ae6464 0%, #925050 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2.6px rgb(225, 224, 224); 
-  opacity: 0.60;
 }
 .ball6 {
   top: 31px;
   left: 298px;
   animation-delay: 1s;
-  width: 11.5px;
-  height: 12px;
-  background: linear-gradient(to bottom, #ae6464 0%, #925050 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2.5px rgb(225, 224, 224); 
-  opacity: 0.80;
 }
 .ball7 {
   top: 41px;
   left: 310px;
   animation-delay: 1.2s;
-  width: 12px;
-  height: 12.5px;
-  background: linear-gradient(to bottom, #ae6464 0%, #925050 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px rgb(225, 224, 224);
 }
 .ball8 {
   top: 51px;
   left: 323px;
   animation-delay: 1.4s;
-  width: 13px;
-  height: 13.5px;
-  background: linear-gradient(to bottom, #ad5454 0%, #925050 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px rgb(225, 224, 224); 
 }
 
 
@@ -194,56 +57,36 @@ body {
   top: 61px;
   left: 335px;
   animation-delay: 1.6s;
-  width: 14px;
-  height: 14.5px;
-  background: linear-gradient(to bottom, #b04d4d 0%, #9f5151 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px rgb(225, 224, 224);
 }
 
 .ball10 {
   top: 70px;
   left: 348px;
   animation-delay: 1.8s;
-  background: linear-gradient(to bottom, #b14747 0%, #a34444 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px rgb(225, 224, 224);
 }
 
 .ball11 {
   top: 80px;
   left: 360px;
   animation-delay: 2s;
-  background: linear-gradient(to bottom, #ac3b3b 0%, #ae4040 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 4px 2px rgb(225, 224, 224); 
 }
 
 .ball12 {
   top: 90px;
   left: 372px;
   animation-delay: 2.2s;
-  background: linear-gradient(to bottom, #cc4848 0%, #ac3a3a 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 5px 2px rgb(225, 224, 224);
 }
 
 .ball13 {
   top: 100px;
   left: 384px;
   animation-delay: 2.4s;
-  background: linear-gradient(to bottom, #cd2b2b 0%, #ab2e2e 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 6px 2px rgb(225, 224, 224);
 }
 
 .ball14 {
   top: 110px;
   left: 396px;
   animation-delay: 2.6s;
-  background: linear-gradient(to bottom, #d81515 0%, #b42020 30%);
-  border-radius: 50%;
-  box-shadow: 0 0 7px 2px rgb(225, 224, 224);
 }
 
 .ball15 {
@@ -456,8 +299,8 @@ body {
 }
 
 .ball39 {
-  top: 445px;
-  left: 588.5px;
+  top: 434px;
+  left: 587.5px;
   animation-delay: 7.6s;
   width: 9px;
   height: 8.5px;
@@ -469,8 +312,8 @@ body {
 
 
 .ball40 {
-  top: 455px;
-  left: 589.5px;
+  top: 445px;
+  left: 588.5px;
   animation-delay: 7.8s;
   width: 8.5px;
   height: 8px;
@@ -479,41 +322,3 @@ body {
   box-shadow: 0 0 4.5px 2.7px rgb(225, 224, 224); 
   opacity: 0.10;
 }
-
-
-
-/* Animation for Color Flushing */
-@keyframes color-flush {
-
-  0%,
-  33.33% {
-    background: linear-gradient(to bottom, #f01010 0%, #b92929 30%, #a00e0e 75%);
-    box-shadow: 0 0 8px 2px rgb(225, 224, 224);
-    /* Normal red state */
-  }
-
-  16.66% {
-    background: linear-gradient(to bottom, #e9f1e9 0%, #f4f4f3 30%, #fdfdfd 75%);
-    box-shadow: 0 0 8px 2px rgb(232, 236, 232);
-    /* Highlighted white state */
-  }
-}
-
-/* @keyframes ballAnimation {
-  0% {
-    box-shadow: 17px 18px  8px 7px #fffefe;
-  }
-  100% {
-    box-shadow: 17px 8px  8px 7px #fafafa;
-  }
-}
-
-.ball {
-  position: absolute;
-  height: 12px;
-  width: 12.5px;
-  top: 234px;
-  left: 345px;
-  border-radius: 50%;
-  animation: ballAnimation 2s ease-in-out infinite;
-} */
